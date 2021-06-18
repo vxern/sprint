@@ -14,7 +14,7 @@ log.warning('Warning message');
 log.error('Error message');
 ```
 
-But if you prefer to be brief, use short call names instead:
+But if you prefer to be brief, use short function names instead:
 
 ```dart
 final log = Sprint('SampleModule');

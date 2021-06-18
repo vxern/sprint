@@ -37,10 +37,12 @@ class Sprint {
     }
 
     // Ensure new messages have correct indentation, based on the owner name
-    message = message.toString().replaceAll('\n', '\n' + ' ' * (3 + owner.length));
+    message =
+        message.toString().replaceAll('\n', '\n' + ' ' * (3 + owner.length));
     message = pen(message.toString());
 
-    print('[$owner] ${printTime ? DateTime.now().toString() + ' ' : ''}$message');
+    print(
+        '[$owner] ${printTime ? DateTime.now().toString() + ' ' : ''}$message');
   }
 
   /// Prints a debug message
