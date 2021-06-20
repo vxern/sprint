@@ -1,5 +1,5 @@
 name: sprint
-version: 1.0.0+1
+version: 1.0.0+2
 description: Fully-documented, simple and complete message-printing library
 author: Dorian Oszczęda <vxern@wordcollector.co.uk>
 homepage: https://github.com/vxern/sprint
@@ -13,8 +13,8 @@ environment:
   sdk: '>=2.13.3 <3.0.0'
 
 dev_dependencies:
-  pedantic: ^1.9.0
-  test: ^1.14.4
+  pedantic: ^1.11.1
+  test: ^1.17.8
   
 dependencies: 
   ansicolor: ^2.0.1

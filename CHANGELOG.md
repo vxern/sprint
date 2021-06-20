@@ -5,3 +5,7 @@
 ## 1.0.0+1
 
 - Formatting source in accordance with `dartfmt`
+
+## 1.0.0+2
+
+- Bumping dev-dependency versions to latest
