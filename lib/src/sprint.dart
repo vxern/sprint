@@ -8,14 +8,19 @@ class Sprint {
   /// Umbrella name for the calling code
   final String owner;
 
+  /// Controls the printing of messages
+  bool quietMode;
+
   /// Whether this Sprint instance should print the time
   final bool printTime;
 
   /// Construct logger with a name of its owner
-  const Sprint(this.owner, {this.printTime = false});
+  Sprint(this.owner, {this.printTime = false, this.quietMode = false});
 
   /// Assigns a colour to the severity of the message and outputs a coloured message once formatted
   void log(dynamic message, {Severity severity = Severity.info}) {
+    if (quietMode) return;
+
     final AnsiPen pen;
 
     switch (severity) {
