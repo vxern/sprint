@@ -1,8 +1,8 @@
-sprint - The simplest way to print messages in your Dart application
+# The simplest way to print messages in your Dart application
 
 ## Usage
 
-If you wish to be verbose, you may use the long function names:
+If you wish to be verbose, you may use long function names:
 
 ```dart
 final log = Sprint('SampleModule');
@@ -26,7 +26,7 @@ log.w('Warning message');
 log.e('Error message');
 ```
 
-Most of the time, however, you will just need to use the Sprint instance name:
+Most of the time, however, you will simply need to use the Sprint instance name:
 
 ```dart
 final log = Sprint('SampleModule');
