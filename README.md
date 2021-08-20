@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 ## The simplest way to print messages in your Dart project
+=======
+# The simplest way to print messages in your Dart application
+>>>>>>> 05b8f0ec901e80a8a0d762523ea93437d248d919
 
 ### Usage
 
+<<<<<<< HEAD
 If you like your code verbose, you may use long function names:
+=======
+If you wish to be verbose, you may use long function names:
+>>>>>>> 05b8f0ec901e80a8a0d762523ea93437d248d919
 
 ```dart
 final log = Sprint('Sample', productionMode: false);
@@ -28,7 +36,7 @@ log.sv('Severe message');
 log.f('Fatal message');
 ```
 
-Just the instance name can be used for logging informational messages:
+Most of the time, however, you will simply need to use the Sprint instance name:
 
 ```dart
 log('Info message');
