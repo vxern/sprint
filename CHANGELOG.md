@@ -19,3 +19,6 @@
   - Refactoring the code
   - Documenting all public fields
   - Adapting the code to work with the `words` lint ruleset
+
+## 1.0.2+1
+  - Updated formatting
