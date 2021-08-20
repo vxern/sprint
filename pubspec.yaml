@@ -5,7 +5,7 @@ description: Extremely tiny, simple-to-use and fully documented library for prin
 homepage: https://github.com/wordcollector/sprint
 repository: https://github.com/wordcollector/sprint
 issue_tracker: https://github.com/wordcollector/sprint/issues
-version: 1.0.1+1
+version: 1.0.2
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
