@@ -21,4 +21,9 @@
   - Adapting the code to work with the `words` lint ruleset
 
 ## 1.0.2+1
+
   - Updated formatting
+
+## 1.0.2+2
+
+  - Added missing documentation comment
