@@ -66,7 +66,7 @@ class Sprint {
 
     // Keep indentation on-level with the owner string
     final indented =
-        message.toString().replaceAll('\n', '\n' ' ' * (3 + owner.length));
+        message.toString().replaceAll('\n', '\n${' ' * (3 + owner.length)}');
     final formatted = '[$owner]$timestamp $indented';
 
     print(pen(formatted));

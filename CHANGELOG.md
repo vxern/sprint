@@ -1,29 +1,33 @@
-## 1.0.0
+## 1.0.2+3
 
-  - Initial release
-
-## 1.0.0+1
-
-  - Formatting source in accordance with `dartfmt`
-
-## 1.0.0+2
-
-  - Bumping dev-dependency versions to latest
-
-## 1.0.1
-
-  - Added quiet mode
-
-## 1.0.2
-
-  - Refactoring the code
-  - Documenting all public fields
-  - Adapting the code to work with the `words` lint ruleset
-
-## 1.0.2+1
-
-  - Updated formatting
+  - Fixed issue with string concatenation taking precedence over string multiplication, which led to the production of large amounts of newlines, where only spaces were expected.
 
 ## 1.0.2+2
 
-  - Added missing documentation comment
+  - Added missing documentation comment.
+
+## 1.0.2+1
+
+  - Updated formatting.
+
+## 1.0.2
+
+  - Refactored the code.
+  - Documented all public fields.
+  - Adapted the code to work with the `words` lint ruleset.
+
+## 1.0.1
+
+  - Added quiet mode which prevents any messages from being printed.
+
+## 1.0.0+2
+
+  - Bumped dev-dependency versions to latest.
+
+## 1.0.0+1
+
+  - Formatted source in accordance with `dartfmt`.
+
+## 1.0.0
+
+  - Initial release.
