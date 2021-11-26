@@ -1,33 +1,39 @@
+## 1.0.2+4
+
+- Updated package description.
+
 ## 1.0.2+3
 
-  - Fixed issue with string concatenation taking precedence over string multiplication, which led to the production of large amounts of newlines, where only spaces were expected.
+- Fixed the issue with string concatenation taking precedence over string
+  multiplication, which led to the production of large amounts of newlines,
+  where only spaces were expected.
 
 ## 1.0.2+2
 
-  - Added missing documentation comment.
+- Added missing documentation comment.
 
 ## 1.0.2+1
 
-  - Updated formatting.
+- Updated formatting.
 
 ## 1.0.2
 
-  - Refactored the code.
-  - Documented all public fields.
-  - Adapted the code to work with the `words` lint ruleset.
+- Refactored the code.
+- Documented all public fields.
+- Adapted the code to work with the `words` lint ruleset.
 
 ## 1.0.1
 
-  - Added quiet mode which prevents any messages from being printed.
+- Added quiet mode which prevents any messages from being printed.
 
 ## 1.0.0+2
 
-  - Bumped dev-dependency versions to latest.
+- Bumped dev-dependency versions to latest.
 
 ## 1.0.0+1
 
-  - Formatted source in accordance with `dartfmt`.
+- Formatted source in accordance with `dartfmt`.
 
 ## 1.0.0
 
-  - Initial release.
+- Initial release.

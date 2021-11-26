@@ -1,9 +1,12 @@
 publish_to: https://pub.dev
 
 name: sprint
-version: 1.0.2+3
+version: 1.0.2+4
 
-description: Extremely tiny, simple-to-use and fully documented library for printing messages.
+description: >-
+  An extremely tiny, simple-to-use and fully documented library for printing
+  messages in a variety of modes, ranging from 'debug' to 'severe'. – Includes
+  optional 'quiet' mode to prevent all messages from being printed.
 
 homepage: https://github.com/wordcollector/sprint
 repository: https://github.com/wordcollector/sprint
@@ -13,7 +16,8 @@ environment:
   sdk: '>=2.12.0 <3.0.0'
 
 dependencies: 
+  # Displaying colours in the terminal
   ansicolor: ^2.0.1
 
 dev_dependencies:
-  words: ^0.0.1+2
+  words: ^0.0.2+1
