@@ -1,3 +1,10 @@
+## 1.0.3
+
+- Updated package description.
+- Split `log()` into two methods `_printToConsole()` and `_printToTerminal()` of
+  which one is assigned based on whether the program is running in a JavaScript
+  environment or not.
+
 ## 1.0.2+4
 
 - Updated package description.

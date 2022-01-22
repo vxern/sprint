@@ -1,32 +1,32 @@
 import 'package:sprint/sprint.dart';
 
 void main() {
-  final log = Sprint('Module');
+  final sprint = Sprint('Module');
 
   print('Printing messages using long function names:');
-  log.debug('Debug message');
-  log.success('Success message');
-  log.info('Info message');
-  log.warning('Warning message');
-  log.severe('Severe message');
-  log.fatal('Fatal message');
+  sprint.debug('Debug message');
+  sprint.success('Success message');
+  sprint.info('Info message');
+  sprint.warning('Warning message');
+  sprint.severe('Severe message');
+  sprint.fatal('Fatal message');
 
   print('Printing messages using short function names:');
-  log.d('Debug message');
-  log.s('Success message');
-  log.i('Info message');
-  log.w('Warning message');
-  log.sv('Severe message');
-  log.f('Fatal message');
+  sprint.d('Debug message');
+  sprint.s('Success message');
+  sprint.i('Info message');
+  sprint.w('Warning message');
+  sprint.sv('Severe message');
+  sprint.f('Fatal message');
 
   print('Printing messages by calling the variable itself:');
-  log('Info message');
+  sprint('Info message');
 
-  log.quietMode = true;
-  log('This message will not be posted, as `quietMode` is set to true.');
+  sprint.quietMode = true;
+  sprint('This message will not be printed, as `quietMode` is set to true.');
 
-  log.quietMode = false;
-  log('However, this one *will* be.');
+  sprint.quietMode = false;
+  sprint('However, this one *will* be.');
 }
 
 // ignore_for_file: cascade_invocations

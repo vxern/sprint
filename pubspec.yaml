@@ -1,12 +1,13 @@
 publish_to: https://pub.dev
 
 name: sprint
-version: 1.0.2+4
+version: 1.0.3
 
 description: >-
-  An extremely tiny, simple-to-use and fully documented library for printing
-  messages in a variety of modes, ranging from 'debug' to 'severe'. – Includes
-  optional 'quiet' mode to prevent all messages from being printed.
+  An tiny, simple-to-use and fully documented library for printing messages to
+  the web console or to the terminal in a variety of modes, ranging from 'debug'
+  to 'severe'. – Includes optional 'quiet' mode to prevent any message from being
+  printed.
 
 homepage: https://github.com/wordcollector/sprint
 repository: https://github.com/wordcollector/sprint
@@ -15,8 +16,7 @@ issue_tracker: https://github.com/wordcollector/sprint/issues
 environment:
   sdk: '>=2.12.0 <3.0.0'
 
-dependencies: 
-  # Displaying colours in the terminal
+dependencies:
   ansicolor: ^2.0.1
 
 dev_dependencies:
