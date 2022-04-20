@@ -1,3 +1,8 @@
+## 1.0.3+1
+
+- Refactored and made formatting and style changes to the project to bring it up
+  to par.
+
 ## 1.0.3
 
 - Updated package description.

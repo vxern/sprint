@@ -4,20 +4,22 @@ void main() {
   final sprint = Sprint('Module');
 
   print('Printing messages using long function names:');
-  sprint.debug('Debug message');
-  sprint.success('Success message');
-  sprint.info('Info message');
-  sprint.warning('Warning message');
-  sprint.severe('Severe message');
-  sprint.fatal('Fatal message');
+  sprint
+    ..debug('Debug message')
+    ..success('Success message')
+    ..info('Info message')
+    ..warning('Warning message')
+    ..severe('Severe message')
+    ..fatal('Fatal message');
 
   print('Printing messages using short function names:');
-  sprint.d('Debug message');
-  sprint.s('Success message');
-  sprint.i('Info message');
-  sprint.w('Warning message');
-  sprint.sv('Severe message');
-  sprint.f('Fatal message');
+  sprint
+    ..d('Debug message')
+    ..s('Success message')
+    ..i('Info message')
+    ..w('Warning message')
+    ..sv('Severe message')
+    ..f('Fatal message');
 
   print('Printing messages by calling the variable itself:');
   sprint('Info message');
@@ -28,5 +30,3 @@ void main() {
   sprint.quietMode = false;
   sprint('However, this one *will* be.');
 }
-
-// ignore_for_file: cascade_invocations

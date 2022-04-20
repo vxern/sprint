@@ -2,7 +2,7 @@ import 'package:ansicolor/ansicolor.dart';
 
 import 'package:sprint/src/level.dart';
 
-/// Determines if the program is running in a JavaScript environment.
+/// Determines whether the program is running in a JavaScript environment.
 const isWeb = identical(0, 0.0);
 
 /// Printing API that allows for simple printing of messages.
@@ -10,13 +10,13 @@ class Sprint {
   /// An identifier of the code in charge of this `Sprint` instance.
   final String owner;
 
-  /// When set to `true`, debug messages will not be displayed.
+  /// When set to true, debug messages will not be displayed.
   final bool productionMode;
 
-  /// When set to `true`, no messages will be displayed.
+  /// When set to true, no messages will be displayed.
   bool quietMode;
 
-  /// When set to `true`, a timestamp will be included with the printed message.
+  /// When set to true, a timestamp will be included with the printed message.
   final bool includeTimestamp;
 
   /// Create an instance of `Sprint`, indicated as belonging to [owner].
@@ -131,6 +131,6 @@ class Sprint {
   /// Alias for `fatal()`.
   void f(dynamic message) => fatal(message);
 
-  /// A call on the instance itself is synonymous with a `info()` call
+  /// A call on the instance itself is synonymous with an `info()` call.
   void call(dynamic message) => info(message);
 }

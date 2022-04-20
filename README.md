@@ -34,7 +34,8 @@ Most of the time, however, you will simply need to use the Sprint instance name:
 log('Info message');
 ```
 
-The display of messages can be controlled using the `quietMode` field. If set to `true`, no messages will be printed.
+The display of messages can be controlled using the `quietMode` field. If set to
+`true`, no messages will be printed.
 
 ```dart
 log.quietMode = true;
