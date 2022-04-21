@@ -1,3 +1,7 @@
+## 1.0.3+2
+
+- Updated description to fit Dart file conventions.
+
 ## 1.0.3+1
 
 - Refactored and made formatting and style changes to the project to bring it up

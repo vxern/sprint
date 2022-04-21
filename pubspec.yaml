@@ -1,11 +1,9 @@
 name: sprint
-version: 1.0.3+1
+version: 1.0.3+2
 
 description: >-
-  An tiny, simple-to-use and fully documented library for printing messages to
-  the web console or to the terminal in a variety of modes, ranging from 'debug'
-  to 'severe'. - Includes optional 'quiet' mode to prevent any message from being
-  printed.
+  A tiny, simple-to-use and fully documented library for printing messages to
+  the web console or to the terminal in a variety of modes.
 
 homepage: https://github.com/wordcollector/sprint
 repository: https://github.com/wordcollector/sprint
