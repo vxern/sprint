@@ -1,3 +1,8 @@
+## 1.0.4
+
+- Switched from the `ansicolor` package to `tint`.
+- Improved the mapping of log levels to colours.
+
 ## 1.0.3+2
 
 - Updated description to fit Dart file conventions.

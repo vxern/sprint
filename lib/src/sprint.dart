@@ -1,9 +1,23 @@
-import 'package:ansicolor/ansicolor.dart';
+import 'package:tint/tint.dart';
 
 import 'package:sprint/src/level.dart';
 
+/// Defines the signature of a function responsible for logging to the terminal
+/// or console.
+typedef LogFunction = void Function(dynamic message, {Level level});
+
 /// Determines whether the program is running in a JavaScript environment.
 const isWeb = identical(0, 0.0);
+
+/// Maps logging levels to the methods that colour them.
+final colorMappings = <Level, String Function(String)>{
+  Level.debug: (string) => string.gray(),
+  Level.success: (string) => string.green(),
+  Level.info: (string) => string.cyan(),
+  Level.warn: (string) => string.yellow(),
+  Level.severe: (string) => string.red(),
+  Level.fatal: (string) => string.red().onYellow(),
+};
 
 /// Printing API that allows for simple printing of messages.
 class Sprint {
@@ -37,7 +51,7 @@ class Sprint {
   }
 
   /// Prints a message to the web console or to the terminal.
-  late final void Function(dynamic message, {Level level}) log;
+  late final LogFunction log;
 
   /// Obtains a timestamp if [includeTimestamp] is `true`.
   String get timestamp => includeTimestamp ? '[${DateTime.now()}] ' : '';
@@ -62,31 +76,7 @@ class Sprint {
       return;
     }
 
-    final pen = AnsiPen();
-    switch (level) {
-      case Level.debug:
-        pen.gray();
-        break;
-      case Level.success:
-        pen.green();
-        break;
-      case Level.info:
-        pen.cyan();
-        break;
-      case Level.warn:
-        pen.yellow();
-        break;
-      case Level.severe:
-        pen.red();
-        break;
-      case Level.fatal:
-        pen
-          ..red()
-          ..yellow(bg: true);
-        break;
-    }
-
-    print(pen(format(message)));
+    print(format(colorMappings[level]!(message.toString())));
   }
 
   /// Prints a debug message.
