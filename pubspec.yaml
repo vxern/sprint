@@ -1,5 +1,5 @@
 name: sprint
-version: 1.1.0
+version: 2.0.0
 
 description: >-
   A tiny, simple-to-use and fully documented library for printing messages to
@@ -10,7 +10,7 @@ repository: https://github.com/wordcollector/sprint
 issue_tracker: https://github.com/wordcollector/sprint/issues
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.17.0 <3.0.0'
 
 dependencies:
   tint: ^2.0.0
