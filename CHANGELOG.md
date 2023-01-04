@@ -1,3 +1,12 @@
+## 2.0.0
+
+- Set the lower bound for the SDK version to `2.17.0`.
+- Added a `minimumLogLevel` option to the constructor of the `Sprint` class.
+- Deprecated the `productionMode` variable.
+- Made the `includeTimestamp` field non-final.
+- Deprecated the `index` field of `Level` and instructed the developer to use
+  `level` instead.
+
 ## 1.0.4
 
 - Switched from the `ansicolor` package to `tint`.
