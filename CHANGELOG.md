@@ -2,6 +2,7 @@
 
 - Added a `minimumLogLevel` option to the constructor of the `Sprint` class.
 - Deprecated the `productionMode` variable.
+- Made the `includeTimestamp` field non-final.
 
 ## 1.0.4
 

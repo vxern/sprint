@@ -39,7 +39,7 @@ class Sprint {
   bool quietMode;
 
   /// If set to true, timestamps will be included with the printed message.
-  final bool includeTimestamp;
+  bool includeTimestamp;
 
   /// Prints a message to the web console or to the terminal.
   late final LogFunction log;
