@@ -1,3 +1,8 @@
+## 1.1.0 (Unreleased)
+
+- Added a `minimumLogLevel` option to the constructor of the `Sprint` class.
+- Deprecated the `productionMode` variable.
+
 ## 1.0.4
 
 - Switched from the `ansicolor` package to `tint`.

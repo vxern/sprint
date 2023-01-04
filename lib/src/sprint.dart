@@ -6,11 +6,14 @@ import 'package:sprint/src/level.dart';
 /// or console.
 typedef LogFunction = void Function(dynamic message, {Level level});
 
+/// Defines the signature of a function responsible for colouring a string.
+typedef ColorFunction = String Function(String string);
+
 /// Determines whether the program is running in a JavaScript environment.
 const isWeb = identical(0, 0.0);
 
 /// Maps logging levels to the methods that colour them.
-final colorMappings = <Level, String Function(String)>{
+final colorMappings = <Level, ColorFunction>{
   Level.debug: (string) => string.gray(),
   Level.success: (string) => string.green(),
   Level.info: (string) => string.cyan(),
@@ -21,37 +24,44 @@ final colorMappings = <Level, String Function(String)>{
 
 /// Printing API that allows for simple printing of messages.
 class Sprint {
-  /// An identifier of the code in charge of this `Sprint` instance.
-  final String owner;
+  /// Name of the module this instance of `Sprint` is being used for logging
+  /// messages about.
+  final String module;
 
   /// When set to true, debug messages will not be displayed.
+  @Deprecated('Specify a minimum log level instead')
   final bool productionMode;
 
-  /// When set to true, no messages will be displayed.
+  /// Specifies the minimum severity of messages to log.
+  Level minimumLogLevel;
+
+  /// If set to true, no messages will be displayed.
   bool quietMode;
 
-  /// When set to true, a timestamp will be included with the printed message.
+  /// If set to true, timestamps will be included with the printed message.
   final bool includeTimestamp;
 
-  /// Create an instance of `Sprint`, indicated as belonging to [owner].
-  ///
-  /// [includeTimestamp] - Whether to include a timestamp with the message.
+  /// Prints a message to the web console or to the terminal.
+  late final LogFunction log;
+
+  /// Create an instance of `Sprint`, indicated as belonging to [module].
   ///
   /// [productionMode] - Whether the project using `Sprint` is in production
   /// mode, thus stopping the printing of `Severity.debug` messages.
   ///
+  /// [includeTimestamp] - Whether to include a timestamp with the message.
+  ///
   /// [quietMode] - Whether the printing of messages should be stopped entirely.
   Sprint(
-    this.owner, {
+    this.module, {
+    @Deprecated('Specify a minimum log level instead')
+        this.productionMode = false,
+    this.minimumLogLevel = Level.debug,
     this.includeTimestamp = false,
-    this.productionMode = false,
     this.quietMode = false,
   }) {
     log = isWeb ? _printToConsole : _printToTerminal;
   }
-
-  /// Prints a message to the web console or to the terminal.
-  late final LogFunction log;
 
   /// Obtains a timestamp if [includeTimestamp] is `true`.
   String get timestamp => includeTimestamp ? '[${DateTime.now()}] ' : '';
@@ -59,12 +69,12 @@ class Sprint {
   /// Formats a message with a timestamp and the owner of the `Sprint` instance.
   String format(dynamic message) {
     final content =
-        message.toString().replaceAll('\n', '\n${' ' * (3 + owner.length)}');
-    return '$timestamp<$owner> $content';
+        message.toString().replaceAll('\n', '\n${' ' * (3 + module.length)}');
+    return '$timestamp<$module> $content';
   }
 
   void _printToConsole(dynamic message, {Level level = Level.info}) {
-    if (quietMode) {
+    if (quietMode || level.index < minimumLogLevel.index) {
       return;
     }
 
@@ -72,7 +82,7 @@ class Sprint {
   }
 
   void _printToTerminal(dynamic message, {Level level = Level.info}) {
-    if (quietMode) {
+    if (quietMode || level.index < minimumLogLevel.index) {
       return;
     }
 
