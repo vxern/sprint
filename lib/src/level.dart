@@ -1,4 +1,4 @@
-/// Determines how a message is to be printed.
+/// Determines the severity of a particular message.
 enum Level {
   /// Gray; Only for the developer to see.
   debug,
