@@ -5,7 +5,7 @@
 If you like your code verbose, you may use long function names:
 
 ```dart
-final log = Sprint('Sample', productionMode: false);
+final log = Sprint('Module');
 
 log.debug('Debug message');
 log.success('Success message');
@@ -18,7 +18,7 @@ log.fatal('Fatal message');
 If you prefer to be brief in your writing, use short function names instead:
 
 ```dart
-final log = Sprint('Sample', productionMode: false);
+final log = Sprint('Module');
 
 log.d('Debug message');
 log.s('Success message');
@@ -28,10 +28,20 @@ log.sv('Severe message');
 log.f('Fatal message');
 ```
 
-Most of the time, however, you will simply need to use the Sprint instance name:
+It is also possible to call the instance itself as follows:
 
 ```dart
+final log = Sprint('Module');
+
 log('Info message');
+```
+
+To include timestamps in logs, set `includeTimestamp` to `true`:
+
+```dart
+final log = Sprint('Module', includeTimestamp: true);
+
+log('This message will not be posted.');
 ```
 
 The display of messages can be controlled using the `quietMode` field. If set to

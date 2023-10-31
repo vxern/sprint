@@ -1,20 +1,20 @@
 name: sprint
-version: 2.0.0
+version: 3.0.0
 
 description: >-
   A tiny, simple-to-use and fully documented library for printing messages to
   the web console or to the terminal in a variety of modes.
 
-homepage: https://github.com/wordcollector/sprint
-repository: https://github.com/wordcollector/sprint
-issue_tracker: https://github.com/wordcollector/sprint/issues
+homepage: https://github.com/vxern/sprint
+repository: https://github.com/vxern/sprint
+issue_tracker: https://github.com/vxern/sprint/issues
 
 environment:
-  sdk: '>=2.17.0 <3.0.0'
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  tint: ^2.0.0
+  tint: ^2.0.1
 
 dev_dependencies:
-  test: ^1.22.1
-  words: ^0.2.0
+  test: ^1.24.9
+  words: ^0.4.4

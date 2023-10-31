@@ -26,10 +26,6 @@ enum Level {
   /// component or the whole program to not be able to continue functioning.
   fatal(5);
 
-  @override
-  @Deprecated('Use [level] for comparisons')
-  int get index;
-
   /// Used to determine whether a message should be logged based on whether it
   /// is equal to or greater than the specified minimum log level.
   final int level;

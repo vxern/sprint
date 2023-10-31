@@ -1,3 +1,13 @@
+## 3.0.0
+
+- Update licence bearer and links.
+- Update `README.md`.
+- Bump dependencies.
+- Bump the SDK version to `3.0.0`.
+- Remove deprecations:
+  - `index` from `Level` - Use `level` instead.
+  - `productionMode` from `Sprint` - Use `minimumLogLevel` instead.
+
 ## 2.0.0
 
 - Set the lower bound for the SDK version to `2.17.0`.

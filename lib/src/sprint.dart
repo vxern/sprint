@@ -37,10 +37,6 @@ class _SprintBase {
 
   final String _indentation;
 
-  /// When set to true, debug messages will not be displayed.
-  @Deprecated('Specify a [minimumLogLevel] instead')
-  final bool productionMode;
-
   /// Specifies the minimum severity of messages to log.
   Level minimumLogLevel;
 
@@ -55,8 +51,6 @@ class _SprintBase {
 
   _SprintBase(
     this.module, {
-    @Deprecated('Specify a [minimumLogLevel] instead')
-        required this.productionMode,
     required this.minimumLogLevel,
     required this.includeTimestamp,
     required this.quietMode,
@@ -152,7 +146,6 @@ class Sprint extends _SprintBase with _Aliases {
   /// [quietMode] - Whether the printing of messages should be stopped entirely.
   Sprint(
     super.module, {
-    super.productionMode = false,
     super.minimumLogLevel = Level.debug,
     super.includeTimestamp = false,
     super.quietMode = false,
