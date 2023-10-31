@@ -40,8 +40,6 @@ To include timestamps in logs, set `includeTimestamp` to `true`:
 
 ```dart
 final log = Sprint('Module', includeTimestamp: true);
-
-log('This message will not be posted.');
 ```
 
 The display of messages can be controlled using the `quietMode` field. If set to
